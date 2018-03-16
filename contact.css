@@ -1,0 +1,316 @@
+@font-face{
+    font-family:'Ringbearer';
+    src: url(fonts/RINGM.TTF);
+}
+@font-face{
+    font-family:'aniron';
+    src: url(fonts/anirm.ttf);
+}
+@font-face{
+    font-family:'tnganbi';
+    src: url(fonts/tnganbi.ttf);
+}
+@font-face{
+    font-family:'tolkien';
+    src: url(fonts/tolkien.ttf);
+}
+@font-face{
+    font-family:'avqest';
+    src: url(fonts/avqest.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   Framework/Wireframe styles
+   ========================================================================== */
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    overflow-x: hidden;
+    background: #000;
+}
+
+.bodybox{
+    min-height: 100%;
+    margin-bottom: -60px;
+}
+
+.picture{   /*Background picture*/
+    position:fixed;
+    width: 100%;
+    min-width: 800px;
+    height: 100%;
+    min-height: 600px;
+    background: url(images/bg_1.jpg);
+    background-size: cover;
+    background-position:center;
+    filter: blur(2px);
+    opacity: 0.6;
+}
+.logo{
+    display: flex;
+    min-width: 800px;
+    background-color: #666;
+    box-shadow: 0 0 15px 5px  #ccc inset;
+}
+.logocontent{
+    flex-grow: 1;
+    z-index: 0;
+}
+.logocontent:nth-child(1), .logocontent:nth-child(5){
+    flex-grow: 10;
+    z-index: -1;
+}
+.logocontent:nth-child(2) img{
+    width: 200px;
+    margin-top: 35px;
+}
+.logocontent:nth-child(3) img{
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.logocontent a{
+    text-decoration: none;
+}
+.logocontent h1{
+    font-family:'Ringbearer';
+    line-height: 130px;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #000;
+}
+
+
+.homebox{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.homewrap{
+    width: 900px;
+    margin: 0 auto;
+}
+.homebox img{
+    margin-top: 20px;
+    width: 80px;
+    height: auto;
+    float: right;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.85);
+    overflow-y: hidden;
+    transition: 0.8s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 45px;
+    font-family:'Ringbearer'; 
+    color: #ddd;
+    display: block;
+    transition: 0.5s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #ffcc00;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+
+.contacttitle{
+    position: relative;
+    font-family: 'Ringbearer';
+    font-size: 45px;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    margin-top: 20px;
+}
+.contactrune{
+    position: relative;
+    font-family: 'tnganbi';
+    font-size: 18px;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+}
+
+.contactlink{
+    position: relative;
+    width: 800px;
+    height: 50px;
+    margin: 20px auto 0;
+}
+.contactlink{
+    position: relative;
+    width: 800px;
+    height: 50px;
+    margin: 20px auto 0;
+}
+.contactlink{
+    position: relative;
+    width: 800px;
+    height: 50px;
+    margin: 20px auto 0;
+}
+.linkshadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ffcc00;
+}
+.linkborder{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #000;
+    opacity: 0.5;
+}
+.linkcontent{
+    position: absolute;
+    font-family: 'avqest';
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.contactlink a{
+    text-decoration: none;
+    font-size: 32px;
+    line-height: 50px;
+    color: #ffcc00;
+}
+.contactinfo{
+    position: relative;
+    font-family: 'aniron';
+    color: #ffcc00;
+    text-shadow: 0 0 5px #000;
+    text-align: center;
+    margin-top: 10px;
+}
+.breakline{
+    position: relative;
+    width: 600px;
+    height: 40px;
+    margin: 15px auto 0;
+}
+.breakline img{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+
+
+
+.pushfoot{
+    height: 80px;
+}
+
+footer{
+    position: relative;
+    
+}
+.footbg{
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    background-color: #eee;
+    
+    opacity: 0.2;
+}
+.ofoot{
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 0 15px #eee inset;
+    display: flex;
+    text-align: center;
+    line-height: 60px;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #000;
+}
+.foot{
+    flex-grow: 1;
+    height: 60px;
+}
+.foot:nth-child(2){
+    font-family:'tolkien';
+    font-size: 1.2em;
+    line-height: 55px;
+}
+.foot:nth-child(3), .foot:nth-child(5){
+    font-family:'Ringbearer';
+}
+.foot:nth-child(4){
+    font-family:'tolkien';
+}
+.foot:nth-child(1), .foot:nth-child(6) {
+    flex-grow: 20;
+}
+/* ==========================================================================
+   Typography styles
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Tablet styles
+   ========================================================================== */
+
+@media only screen and (max-width:800px) {
+    /*styles in between curly brackets*/
+}
+
+
+/* ==========================================================================
+   Mobile styles
+   ========================================================================== */
+
+@media only screen and (max-width:400px) {
+    /*styles in between curly brackets*/
+}

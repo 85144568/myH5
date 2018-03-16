@@ -1,0 +1,258 @@
+@font-face{
+    font-family:'Ringbearer';
+    src: url(fonts/RINGM.TTF);
+}
+@font-face{
+    font-family:'aniron';
+    src: url(fonts/anirm.ttf);
+}
+@font-face{
+    font-family:'tnganbi';
+    src: url(fonts/tnganbi.ttf);
+}
+@font-face{
+    font-family:'tolkien';
+    src: url(fonts/tolkien.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================================================
+   Framework/Wireframe styles
+   ========================================================================== */
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    overflow-x: hidden;
+    background: #000;
+}
+
+.bodybox{   /*Leave a footer in place*/
+    min-height: 100%;
+    margin-bottom: -60px;
+}
+
+
+.picture{   /*Background picture*/
+    position: fixed;
+    width: 100%;
+    min-width: 800px;
+    height: 100%;
+    min-height: 600px;
+    background: url(images/bg_1.jpg);
+    background-size: cover;
+    background-position:center;
+    filter: blur(2px);
+    opacity: 0.6;
+}
+.logo{
+    display: flex;
+    min-width: 800px;
+    background-color: #666;
+    box-shadow: 0 0 15px 5px  #ccc inset;
+}
+.logocontent{
+    flex-grow: 1;
+    z-index: 0;
+}
+.logocontent:nth-child(1), .logocontent:nth-child(5){
+    flex-grow: 10;
+    z-index: -1;
+}
+.logocontent:nth-child(2) img{
+    width: 200px;
+    margin-top: 35px;
+}
+.logocontent:nth-child(3) img{
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.logocontent a{
+    text-decoration: none;
+}
+.logocontent h1{
+    font-family:'Ringbearer';
+    line-height: 130px;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #000;
+}
+
+
+
+#wrap{
+    position: relative;
+    width: 800px;
+    margin: 60px auto 0;
+}
+.wrapshadow{
+    position: absolute;
+    width: 800px;
+    height: 360px;
+    background-color: #000;
+    box-shadow: 0 0 20px 10px #000;
+    opacity: 0.3;
+}
+.pic{
+    width: 800px;
+    height: 360px;
+    perspective: 1000px;
+}
+.pic ul li{
+    position: relative;
+    list-style-type: none;
+    float: left;
+    height: 360px;
+    transform-style: preserve-3d;
+    transform: translateZ(-180px);
+    cursor: pointer;
+}
+.pic ul li div{
+    position: absolute;
+    height: 360px;
+}
+.pic ul li div:nth-child(1){
+    top: -360px;
+    transform-origin: bottom;
+    transform: translateZ(180px) rotateX(90deg);
+    background: url(images/pic_3.jpg);
+}
+.pic ul li div:nth-child(2){
+    top: 360px;
+    transform-origin: top;
+    transform: translateZ(180px) rotateX(-90deg);
+    background: url(images/pic_4.jpg);
+}
+.pic ul li div:nth-child(3){
+    transform: translateZ(180px);
+    background: url(images/pic_1.jpg)
+}
+.pic ul li div:nth-child(4){
+    transform: translateZ(-180px) rotateX(180deg);
+    background: url(images/pic_2.jpg);
+}
+
+
+
+.tab{
+    text-align: center;
+}
+.tab ul li{
+    width: 140px;
+    height: 60px;
+    background: #111;
+    color: #ffcc00;
+    opacity: 0.8;
+    font-family:'aniron';
+    font-size: 15px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 25px;
+    margin: 60px 20px;
+    list-style: none;
+    box-shadow: 0 0 20px  #fff;
+    display:inline-block;
+    cursor: pointer;
+}
+.tab ul li.on{
+    background: #ffcc00;
+    box-shadow: 0 0 25px  #000;
+    color: #000;
+}
+
+
+.slogan{
+    position: relative;
+    text-align: center;
+}
+.slogan p{
+    font-size: 50px;
+    font-family: 'Ringbearer';
+    text-shadow: 0 0 10px #000;
+    color: #ffcc00;
+}
+.rune{
+    position: relative;
+    text-align: center;
+}
+.rune p{
+    font-size: 20px;
+    font-family: 'tnganbi';
+    text-shadow: 0 0 5px #000;
+    color: #ffcc00;
+}
+.pushfoot{
+    height: 80px;
+}
+
+
+footer{
+    position: relative;
+}
+.footbg{
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    background-color: #eee;
+    opacity: 0.2;
+}
+.ofoot{
+    position: absolute;
+    width: 100%;
+    box-shadow: 0 0 15px #eee inset;
+    display: flex;
+    text-align: center;
+    line-height: 60px;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #000;
+}
+.foot{
+    flex-grow: 1;
+    height: 60px;
+}
+.foot:nth-child(2){
+    font-family:'tolkien';
+    font-size: 1.2em;
+    line-height: 55px;
+}
+.foot:nth-child(3), .foot:nth-child(5){
+    font-family:'Ringbearer';
+}
+.foot:nth-child(4){
+    font-family:'tolkien';
+}
+.foot:nth-child(1), .foot:nth-child(6) {
+    flex-grow: 20;
+}
+
+
+
+
+
+/* ==========================================================================
+   Typography styles
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Tablet styles
+   ========================================================================== */
+
+@media only screen and (max-width:800px) {
+    /*styles in between curly brackets*/
+}
+
+
+/* ==========================================================================
+   Mobile styles
+   ========================================================================== */
+
+@media only screen and (max-width:400px) {
+    /*styles in between curly brackets*/
+}
